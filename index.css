@@ -1,0 +1,251 @@
+/*
+COLOR PALETTE
+https://coolors.co/48acf0-495867-c98bb9-b2b09b-6b2737
+#48ACF0 - Blue jeans
+#495867 - Black Coral
+#C98BB9 - Middle Purple
+#B2B09B - Sage(Ash)
+#6B2737 - Wine
+#343434 - Dark gray
+#2F3061 - Dark Blue
+#F7FFF7 - Almost white
+#A1C6D7 - Light blue
+#F0E68C - Khaki
+#008080 - Teal
+#FAFAD2 - Lightgoldenrodyellow
+#FFD700 - Gold
+#191970 - Midnightblue
+*/
+
+/* https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+
+/* ------------------------ Global styles ---------------------- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  /* The Box Model Fix */
+  box-sizing: inherit;
+}
+
+body {
+  color: #343434; /* Dark gray */
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+img {
+  width: 300px;
+}
+
+a {
+  color: whitesmoke;
+}
+
+/* .diff-color {
+  color: red;
+} */
+
+/* a:visited {
+  color: #B2B09B;
+} */
+
+a:hover {
+  /* Pseudo-class Selectors */
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 100px;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 45px;
+  /* margin: 0; */
+}
+
+h1,
+h2 {
+  /* Font Properties */
+  font-family: "Caveat", cursive;
+  font-weight: 400;
+  margin: 0;
+}
+
+.content-wrap {
+  /* Content Wrapper */
+  max-width: 800px; /* RWD - Fluid (max-) */
+  width: 85%; /* RWD - Fluid (max-) */
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+.item-details h3 + p {
+  font-style: italic;
+}
+
+.item-details h3 ~ p {
+  margin: 0;
+}
+
+.divider > section {
+  border-bottom: 1px dashed #343434;
+  padding: 25px 0;
+}
+
+.divider > section:last-of-type {
+  border-bottom: none;
+}
+
+/* ------------------------ Profile ---------------------- */
+header {
+  /* display: flex;
+   flex-direction: row; */
+  background-color: #2f3061; /* Dark Blue */
+  color: #f7fff7; /* Almost white */
+  /* text-align: center; */ /* Moved to Responsive */
+}
+
+/* ------------------------ Project ---------------------- */
+.projects {
+  background: #fafad2; /* Lightgoldenrodyellow */ /* #F7FFF7 */ /* Almost white */
+}
+
+.projects a {
+  color: #2f3061; /* Dark Blue */
+}
+
+.projects .btn {
+  color: #f7fff7; /* Almost white */
+  background: #2f3061; /* Dark Blue */
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 5px;
+  display: inline-block; /* The Box Model */
+}
+
+.projects .btn:hover {
+  background: rgba(47, 48, 97, 80%);
+}
+
+.project-item {
+  /* Float and Position */
+  overflow: hidden;
+}
+
+/* .project-item img {
+  float: left;
+  margin-right: 20px;
+} */
+
+.project-item h3 {
+  margin-top: 0;
+}
+
+/* ------------------------ Work Experience ---------------------- */
+.work-experience {
+  background: #a1c6d7; /* Light blue */
+}
+
+/* .job-item {          /* Moved to Responsive
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 20px;
+} */
+
+/* ------------------------ Education ---------------------- */
+.education {
+  background-image: url(../Profile/images/photo.jfif);
+  background-size: cover; /* RWD - Flexible background image */
+  background-position: center; /* RWD - Flexible background image */
+  padding-bottom: 100px; /* RWD - Flexible background image */
+  /* background: #20B2AA;     Almost white */
+}
+
+.education p {
+  width: 60%; /* RWD - Flexible background image */
+}
+
+.king {
+  color: blue;
+}
+
+/* ------------------------ Contact Info ---------------------- */
+footer {
+  background: #343434; /*Dark gray*/
+  color: #f7fff7; /* Almost white */
+  /* text-align: center; */ /* Moved to Responsive */
+}
+
+.contact-list {
+  /* Aligning items in a flex container */
+  list-style-type: none;
+  padding: 0;
+  /* display: flex; */ /* Moved to Responsive */
+  /*  justify-content: center; */ /* Moved to Responsive */
+}
+
+.contact-list a {
+  padding: 15px;
+  display: inline-block;
+}
+
+h4,
+h5 {
+  font-weight: 300;
+  color: #fafad2;
+  text-align: center;
+  line-height: 0.8;
+  /* margin-bottom: 0; */
+}
+
+/* ------------------------ Responsive ---------------------- */
+@media screen and (min-width: 750px) {
+  header,
+  footer {
+    text-align: center;
+  }
+  .project-item img {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+  }
+
+  .contact-list {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  h1 {
+    font-size: 75px;
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    line-height: 1;
+  }
+
+  .contact-list a {
+    padding: 5px;
+  }
+}
